@@ -1,0 +1,10 @@
+:root {
+  --red: #d33;
+}
+/* This is a test Comment */
+
+a {
+  &:hover {
+    color: color(var(--red) a(54%));
+  }
+}

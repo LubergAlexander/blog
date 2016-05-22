@@ -1,0 +1,42 @@
+{
+  "source": "./src",
+  "destination": "./build",
+  "clean": false,
+  "metadata": {
+    "site": {
+      "title": "alex.luberg.me",
+      "url": "http://alex.luberg.me"
+    }
+  },
+  "plugins": {
+    "metalsmith-markdown": {},
+    "metalsmith-permalinks": {},
+    "metalsmith-layouts": {
+      "engine": "handlebars",
+      "directory": "src/layouts"
+    },
+    "metalsmith-postcss": {
+      "plugins": {
+        "autoprefixer": true,
+        "cssnano": true
+      },
+      "map": {
+        "inline": false
+      }
+    },
+    "metalsmith-move-up": {
+     "transforms": [
+       {"pattern": "layouts/styles/**/*", "by": "1"},
+       {"pattern": "posts/**/*", "by": "1"}
+     ]
+    },
+    "metalsmith-serve": {
+      "port": "8080",
+      "verbose": true
+    },
+    "metalsmith-watch": {
+      "pattern": "src/**/*",
+      "livereload": true
+    }
+  }
+}
