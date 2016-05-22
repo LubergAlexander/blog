@@ -24,6 +24,7 @@
         "inline": false
       }
     },
+    "metalsmith-html-minifier": "*.html",
     "metalsmith-move-up": {
      "transforms": [
        {"pattern": "layouts/styles/**/*", "by": "1"},
