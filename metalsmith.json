@@ -25,21 +25,15 @@
       }
     },
     "metalsmith-html-minifier": "*.html",
-    "metalsmith-gzip": {
-      "gzip": {
-        "level": 9
-      }
-    },
     "metalsmith-move-up": {
      "transforms": [
-       {"pattern": "layouts/styles/**/*", "by": 1},
-       {"pattern": "posts/**/*", "by": 1}
+       {"pattern": "layouts/styles/**/*", "by": "1"},
+       {"pattern": "posts/**/*", "by": "1"}
      ]
     },
     "metalsmith-serve": {
       "port": "8080",
-      "verbose": true,
-      "gzip": true
+      "verbose": true
     },
     "metalsmith-watch": {
       "pattern": "src/**/*",
