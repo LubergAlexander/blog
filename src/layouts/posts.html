@@ -12,10 +12,11 @@
       <a href="/">Home</a>
     </p>
   </header>
-  <h1>{{ title }}</h1>
-  <p>{{ description }}</p>
+  <h1>Posts</h1>
 
-  {{{ contents }}}
+  {% for post in collections.posts %}
+    <a href="{{ post.path }}">{{ post.title }}</a>
+  {% endfor %}
 
   <footer>
     <p>Generated with {{ generator }} &mdash; <a href="{{ url }}">{{ url }}</a></p>

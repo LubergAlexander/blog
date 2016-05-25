@@ -11,11 +11,12 @@
     <p>
       <a href="/">Home</a>
     </p>
-
   </header>
+
   <h1>{{ title }}</h1>
-  <time>{{ date }}</time>
-  {{{ contents }}}
+  <time>{{ date |date('j F') }}</time>
+
+  {{ contents | safe }}
 
   <footer>
     <p>Generated with {{ generator }} &mdash; <a href="{{ url }}">{{ url }}</a></p>
